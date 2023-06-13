@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const days = prompt("enter days");
+        const type = prompt("enter type");
+        let result;
+        if(type == "economy"){
+            result = 4000 * days;
+           
+        }
+        else if(type == "midsize"){
+            result = 10000 * days;
+            
+        }
+        else if(type == "luxury"){
+            result = 20000 * days;
+           
+        }
+        else{
+            alert("not valid type");
+        }
+        console.log("Rental cost is :")
+        console.log(result)
+    </script>
+</body>
+</html>
