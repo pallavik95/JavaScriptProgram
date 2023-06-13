@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Highlight</title>
+    <style>
+        body{
+            margin: 100px;
+        }
+        .tcolor{
+            background-color: yellow;
+        }
+        #text{
+            line-height: 40px;
+            word-spacing: 15px;
+            letter-spacing: 2px;
+        }
+    </style>
+</head>
+<body>
+<p id="text">PW Skills is the result of a continual effort to exponentially increase the employability of every Indian, irrespective of their socioeconomic status. With accessibility and affordability being the support structure of high-quality, industry-relevant courses, PW Skills aims to empower professionals and students alike to either jumpstart their careers or leverage existing skills with new, future-driven upgrades that will help them realise their full potential.</p>
+    <script>
+        
+        function highlight(){
+            const paragraph = document.getElementById("text").innerText;
+            let words = paragraph.split(" ");
+            let output = "";
+            updateddword = "";
+            for(let i=0; i<words.length; i++){
+                let word = words[i];
+                if(word.length > 8){
+                    updateddword = "<span class='tcolor'>" +word +"</span>";
+                }
+                else{
+                    updateddword = word;
+                }
+                output = output + " " + updateddword + " ";
+            }
+            return output;
+        }
+        let result = highlight();
+        document.getElementById("text").innerHTML = result;
+    </script>
+</body>
+</html>
