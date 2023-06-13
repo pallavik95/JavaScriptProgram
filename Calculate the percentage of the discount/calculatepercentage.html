@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discount Percentage</title>
+</head>
+<body>
+    <script>
+        function calculate(){
+         let productAmount = parseFloat(prompt("Enter amount of product: "))
+         let Disconut = parseFloat(prompt("Enter discounted price"));
+          let final_price = parseFloat((Disconut*100)/productAmount)
+         document.body.innerText = "you save discount of  " + final_price +"% on this item."
+        }
+        calculate();
+    </script>
+    
+</body>
+</html>
