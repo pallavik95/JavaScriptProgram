@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BillSplitter</title>
+</head>
+<body>
+    <script>
+        let dish = {dish1:500,dish2:200,dish3:420};
+        const values = Object.values(dish)
+        const sum = values.reduce((accumulator, value) => {
+            return accumulator + value;
+        },0);
+        let input = parseInt(prompt("Enter number of person"));
+        let  bill = sum/input;
+          console.log(bill);
+       
+        
+    </script>
+</body>
+</html>
