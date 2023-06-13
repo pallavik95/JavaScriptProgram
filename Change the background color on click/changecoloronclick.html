@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>change color on click</title>
+    <style>
+        body{
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <button id="btn" onclick="changecolor()">Click To Change Color</button>
+
+    <script>
+        function changecolor(){
+            let colorval = ['#faebd7','#301e96','#cd3c3c','#96621e'];
+            const random = Math.floor(Math.random() * colorval.length)
+            document.body.style.backgroundColor = colorval[random];
+        } 
+    </script>
+</body>
+</html>
