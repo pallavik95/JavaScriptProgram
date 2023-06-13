@@ -1,0 +1,33 @@
+body{
+background: rosybrown;
+}
+
+div{
+    width: 250px;
+    height: 400px;
+    margin: 20px auto 0 auto;
+    padding: 20px 20px;
+    background-color: white;
+    border: none;
+    border-radius: 30px;
+    box-shadow: 2px 5px beige;
+}
+button{
+    padding: 8px 90px;
+    background-color: rgb(104, 85, 157);
+    color: white;
+    font-size: 20px;
+    align-content: center;
+    align-items: center;
+    margin: 10px auto 0 auto;
+    cursor: pointer;
+}
+input{
+    border-radius: 10px;
+    padding: 10px;
+}
+h2{
+
+    font-size: 25px;
+    color: cadetblue;
+}
