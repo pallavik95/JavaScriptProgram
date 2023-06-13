@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banking Application</title>
+</head>
+
+    <p id="displayamount"></p>
+   
+</body>
+<script>
+  function update(){
+    let msg =prompt("Enter your choice : 1 for Deposit 2 for withdraw");
+    const c_account = [{'name':'Anirudh','balance':20000}];
+        if(msg==1){
+            
+         let nm = prompt("enter name-");
+         c_account.forEach((el)=>{
+            if(el.name==nm){
+                let deposit = parseInt(prompt("enter deposit ammount-"));
+                let dbal = el.balance + deposit; 
+                 document.body.innerText = "Total Amount:- " +dbal;
+            }
+         })
+        }
+       else if(msg==2){
+        
+        let nm = prompt("enter name-");
+         c_account.forEach((el)=>{
+            if(el.name==nm){
+                let withdraw = parseInt(prompt("enter withdraw ammount-"));
+                let wbal = el.balance - withdraw; 
+                 document.body.innerText = "Total Amount:- "+ wbal;
+            }
+       
+         })
+      }
+     }
+     update();
+      
+</script>
+</html>
