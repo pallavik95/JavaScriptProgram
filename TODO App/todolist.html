@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TODO LIST</title>
+</head>
+<body>
+    <input type="text" id="inputdata">
+    <ul id="uitem"></ul>
+    <button onclick="additem()">ADD</button>
+    <script>
+        function additem(){
+            let ul = document.getElementById("uitem");
+            const input = document.getElementById("inputdata").value;
+            let li = document.createElement("li");
+            li.setAttribute("id",input)
+            li.appendChild(document.createTextNode(input));
+            ul.appendChild(li)
+        }
+        
+
+    </script>
+</body>
+</html>
