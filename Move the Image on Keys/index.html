@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ImageMover</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://kit.fontawesome.com/d3ccfde9d3.js" crossorigin="anonymous"></script>
+
+    <script>
+        function leftArrowPressed() {
+          var element = document.getElementById("image1");
+          element.style.left = parseInt(element.style.left) - 5 + 'px';
+        }
+  
+        function rightArrowPressed() {
+          var element = document.getElementById("image1");
+          element.style.left = parseInt(element.style.left) + 5 + 'px';
+  
+        }
+  
+        function upArrowPressed() {
+          var element = document.getElementById("image1");
+          element.style.top = parseInt(element.style.top) - 5 + 'px';
+        }
+  
+        function downArrowPressed() {
+          var element = document.getElementById("image1");
+          element.style.top = parseInt(element.style.top) + 5 + 'px';
+        }
+  
+        function Selection(evt) {
+          switch (evt.keyCode) {
+            case 37:
+              leftArrowPressed();
+              break;
+            case 39:
+              rightArrowPressed();
+              break;
+            case 38:
+              upArrowPressed();
+              break;
+            case 40:
+              downArrowPressed();
+              break;
+          }
+        };
+  
+        function Ready() {
+          window.addEventListener('keydown', Selection);
+        }
+      </script>
+</head>
+<body onload="Ready()" onkeydown="" onkeyup="">
+    <img id="image1" src="https://images.pexels.com/photos/4101555/pexels-photo-4101555.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" style="position:absolute;left:0; top:0;">
+    
+</body>
+</html>
